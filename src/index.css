@@ -274,3 +274,65 @@ h2 {
         flex-direction: column;
     }
 }
+
+
+/* Canvas стили */
+.canvas-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Улучшенные скроллы */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #5a67d8;
+    }
+
+/* Анимации для элементов */
+.canvas-element {
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+    .canvas-element:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+/* Ресайз хэндлеры */
+.resize-handle {
+    transition: transform 0.1s ease;
+}
+
+    .resize-handle:hover {
+        transform: scale(1.2);
+    }
+
+/* Текстовое поле для редактирования */
+.editing-textarea {
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
